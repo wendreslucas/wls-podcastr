@@ -18,7 +18,7 @@ const ConvexClerkProvider = ({ children }: { children: ReactNode }) => (
         logoImageUrl: "/icons/auth-logo.svg",
       },
       variables: {
-        colorBackground: "#15171c",
+        colorBackground: "#262f40",
         colorPrimary: "",
         colorText: "white",
         colorInputBackground: "#1b1f29",
