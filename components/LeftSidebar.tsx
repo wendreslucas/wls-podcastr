@@ -57,7 +57,7 @@ const LeftSidebar = () => {
             asChild
             className="text-16 w-full bg-gray-0 font-extrabold text-black-1"
           >
-            <Link href="/sign-in">Sign in</Link>
+            <Link href="/sign-in">Entrar</Link>
           </Button>
         </div>
       </SignedOut>
@@ -67,7 +67,7 @@ const LeftSidebar = () => {
             className="text-16 w-full bg-gray-0 font-extrabold text-black-1"
             onClick={() => signOut(() => router.push("/"))}
           >
-            Log Out
+            Sair
           </Button>
         </div>
       </SignedIn>
