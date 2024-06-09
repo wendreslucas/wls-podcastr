@@ -53,7 +53,10 @@ const LeftSidebar = () => {
 
       <SignedOut>
         <div className="flex-center w-full pb-14 max-lg:px-4 lg:pr-8">
-          <Button asChild className="text-16 w-full bg-blue-1 font-extrabold">
+          <Button
+            asChild
+            className="text-16 w-full bg-gray-0 font-extrabold text-black-1"
+          >
             <Link href="/sign-in">Sign in</Link>
           </Button>
         </div>
@@ -61,7 +64,7 @@ const LeftSidebar = () => {
       <SignedIn>
         <div className="flex-center w-full pb-14 max-lg:px-4 lg:pr-8">
           <Button
-            className="text-16 w-full bg-blue-1 font-extrabold"
+            className="text-16 w-full bg-gray-0 font-extrabold text-black-1"
             onClick={() => signOut(() => router.push("/"))}
           >
             Log Out
