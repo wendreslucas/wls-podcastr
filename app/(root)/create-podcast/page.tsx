@@ -78,10 +78,10 @@ const CreatePodcast = () => {
       //  if (!audioUrl || !imageUrl || !voiceType) {
       if (!imageUrl || !voiceType) {
         toast({
-          title: "Please generate audio and image",
+          title: "Por favor, gere um audio e uma imagem",
         });
         setIsSubmitting(false);
-        throw new Error("Please generate audio and image");
+        throw new Error("Por favor, gere um audio e uma imagem");
       }
 
       const podcast = await createPodcast({
@@ -91,7 +91,7 @@ const CreatePodcast = () => {
         imageUrl,
         voiceType,
         imagePrompt,
-        voicePrompt,
+        // voicePrompt,
         views: 0,
         // audioDuration,
         // audioStorageId: audioStorageId!,
@@ -117,6 +117,7 @@ const CreatePodcast = () => {
         <form
           onSubmit={form.handleSubmit(onSubmit)}
           className="mt-12 flex w-full flex-col"
+          autoComplete="off"
         >
           <div className="flex flex-col gap-[30px] border-b border-black-5 pb-10">
             <FormField
@@ -125,12 +126,12 @@ const CreatePodcast = () => {
               render={({ field }) => (
                 <FormItem className="flex flex-col gap-2.5">
                   <FormLabel className="text-16 font-bold text-white-1">
-                    Title
+                    Titulo
                   </FormLabel>
                   <FormControl>
                     <Input
                       className="input-class focus-visible:ring-offset-gray-0"
-                      placeholder="Title Podcast"
+                      placeholder="Titulo do Podcast"
                       {...field}
                     />
                   </FormControl>
@@ -141,7 +142,7 @@ const CreatePodcast = () => {
 
             <div className="flex flex-col gap-2.5">
               <Label className="text-16 font-bold text-white-1">
-                Select AI Voice
+                Selecione a voz IA
               </Label>
 
               <Select onValueChange={(value) => setVoiceType(value)}>
@@ -151,7 +152,7 @@ const CreatePodcast = () => {
                   )}
                 >
                   <SelectValue
-                    placeholder="Select AI Voice"
+                    placeholder="Selecione a voz IA"
                     className="placeholder:text-gray-0 "
                   />
                 </SelectTrigger>
@@ -181,12 +182,12 @@ const CreatePodcast = () => {
               render={({ field }) => (
                 <FormItem className="flex flex-col gap-2.5">
                   <FormLabel className="text-16 font-bold text-white-1">
-                    Description
+                    Descrição
                   </FormLabel>
                   <FormControl>
                     <Textarea
                       className="input-class focus-visible:ring-offset-gray-0"
-                      placeholder="Write a short podcast description"
+                      placeholder="Escreva uma pequena descrição para o podcast"
                       {...field}
                     />
                   </FormControl>
@@ -221,11 +222,11 @@ const CreatePodcast = () => {
               >
                 {isSubmitting ? (
                   <>
-                    Submitting
+                    Enviando
                     <Loader size={20} className="animate-spin ml-2" />
                   </>
                 ) : (
-                  "Submit & Publish Podcast"
+                  "Enviar e Publicar Podcast"
                 )}
               </Button>
             </div>

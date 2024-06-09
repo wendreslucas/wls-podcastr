@@ -13,11 +13,11 @@ const GeneratePodcast = (props: GeneratePodcastProps) => {
     <div>
       <div className="flex flex-col gap-2.5">
         <Label className="text-16 font-bold text-white-1">
-          AI Prompt to generate Podcast
+          Prompt IA para gerar podcast
         </Label>
         <Textarea
           className="input-class font-light focus-visible:ring-offset-orange-1"
-          placeholder="Provide text to generate audio"
+          placeholder=" Forneça o texto para gerar o audio"
           rows={5}
           value={props.voicePrompt}
           onChange={(e) => props.setVoicePrompt(e.target.value)}
@@ -31,11 +31,11 @@ const GeneratePodcast = (props: GeneratePodcastProps) => {
         >
           {isGenerating ? (
             <>
-              Generating
+              Gerando
               <Loader size={20} className="animate-spin ml-2" />
             </>
           ) : (
-            "Generate"
+            "Gerar"
           )}
         </Button>
       </div>
