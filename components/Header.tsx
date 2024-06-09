@@ -19,7 +19,7 @@ const Header = ({
         <div />
       )}
       <Link href="/discover" className="text-16 font-semibold text-gray-0">
-        See all
+        Ver tudo
       </Link>
     </header>
   );
