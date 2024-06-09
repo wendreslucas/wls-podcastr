@@ -6,8 +6,8 @@ export default defineSchema({
     user: v.id("users"),
     podcastTitle: v.string(),
     podcastDescription: v.string(),
-    // audioUrl: v.optional(v.string()),
-    // audioStorageId: v.optional(v.id("_storage")),
+    audioUrl: v.optional(v.string()),
+    audioStorageId: v.optional(v.id("_storage")),
     imageUrl: v.optional(v.string()),
     imageStorageId: v.optional(v.id("_storage")),
     author: v.string(),
@@ -16,7 +16,7 @@ export default defineSchema({
     voicePrompt: v.string(),
     imagePrompt: v.string(),
     voiceType: v.string(),
-    // audioDuration: v.number(),
+    audioDuration: v.number(),
     views: v.number(),
   })
     .searchIndex("search_author", { searchField: "author" })
